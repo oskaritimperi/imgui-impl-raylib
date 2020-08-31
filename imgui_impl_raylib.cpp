@@ -234,10 +234,11 @@ bool ImGui_ImplRaylib_ProcessEvent()
 
     FOR_ALL_KEYS(SET_KEY_DOWN);
 
-    if (GetKeyPressed() != -1)
-    {
+    // Uncomment the three lines below if using raylib earlier than version 3.
+    //if (GetKeyPressed() != -1)
+    //{
         io.AddInputCharacter(GetKeyPressed());
-    }
+    //}
 
     return true;
 }
