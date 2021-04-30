@@ -12,8 +12,8 @@
 //#define AUTO_FONTATLAS
 
 /*	ENABLE_SCODETOUTF8			Toggled by default, since the code was passing
-								raylib's scancodes as codepoints, and ImGui uses UTF-8
-								on widgets like InputText.
+						raylib's scancodes as codepoints, and ImGui uses UTF-8
+						on widgets like InputText.
 */
 #define ENABLE_SCODETOUTF8
 
