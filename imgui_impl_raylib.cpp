@@ -275,7 +275,7 @@ void ImGui_ImplRaylib_LoadDefaultFontAtlas()
         image.width = width;
         image.height = height;
         image.mipmaps = 1;
-        image.format = UNCOMPRESSED_R8G8B8A8;
+        image.format = PIXELFORMAT_UNCOMPRESSED_R8G8B8A8;
         Texture2D tex = LoadTextureFromImage(image);
 		g_AtlasTexID = tex.id;
 		io.Fonts->TexID = (void*)&g_AtlasTexID;
