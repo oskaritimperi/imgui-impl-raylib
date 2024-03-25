@@ -38,7 +38,7 @@ bool ImGui_ImplRaylib_Init()
     io.KeyMap[ImGuiKey_Space] = KEY_SPACE;
     io.KeyMap[ImGuiKey_Enter] = KEY_ENTER;
     io.KeyMap[ImGuiKey_Escape] = KEY_ESCAPE;
-    io.KeyMap[ImGuiKey_KeyPadEnter] = KEY_KP_ENTER;
+    io.KeyMap[ImGuiKey_KeypadEnter] = KEY_KP_ENTER;
     io.KeyMap[ImGuiKey_A] = KEY_A;
     io.KeyMap[ImGuiKey_C] = KEY_C;
     io.KeyMap[ImGuiKey_V] = KEY_V;
@@ -249,7 +249,7 @@ bool ImGui_ImplRaylib_ProcessEvent()
     //{
 #ifdef ENABLE_SCODETOUTF8
     int length;     //  Length was only ever created to be passed to CodepointToUtf8(), since it doesn't check for nullptrs.
-    io.AddInputCharactersUTF8(CodepointToUtf8(GetCharPressed(), &length));
+    io.AddInputCharactersUTF8(CodepointToUTF8(GetCharPressed(), &length));
     (void)length;   //  Silencing the compiler warnings.
 #else
     io.AddInputCharacter(GetKeyPressed());
